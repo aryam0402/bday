@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprise for my baby😘</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body class="disco-active">
+
+  <!-- Entrance Overlay -->
+  <div id="startOverlay" class="start-overlay">
+    <div class="start-content">
+      <span class="start-icon">🎉</span>
+      <h2>Tap Anywhere to Enter</h2>
+    </div>
+  </div>
+
+  <!-- Original ambient elements -->
+  <div class="disco-lights"></div>
+  <div class="balloon-container" id="balloonContainer"></div>
+
+  <!-- Audio -->
+  <audio id="countdownMusic" loop preload="auto" src="countdown.mp3"></audio>
+  <audio id="birthdayMusic" loop preload="auto" src="birthday.mp3"></audio>
+
+  <main class="wrapper">
+
+    <!-- HERO AND COUNTDOWN -->
+    <section class="card hero-card">
+
+      <div class="avatar-wrapper">
+        <img class="avatar" src="images/main.jpg" alt="Birthday VIP" />
+        <span class="disco-ball">🪩</span>
+      </div>
+
+      <h1 class="glow-title" id="mainTitle">THE COUNTDOWN IS ON! ⏳</h1>
+
+      <div class="countdown-grid" id="countdownGrid">
+        <div class="time-box">
+          <span id="days">00</span>
+          <label>Days</label>
+        </div>
+
+        <div class="time-box">
+          <span id="hours">00</span>
+          <label>Hours</label>
+        </div>
+
+        <div class="time-box">
+          <span id="mins">00</span>
+          <label>Mins</label>
+        </div>
+
+        <div class="time-box">
+          <span id="secs">00</span>
+          <label>Secs</label>
+        </div>
+      </div>
+
+      <div id="cakeStatus" class="lock-status locked">
+        🔒 Candles locked! Unlocks at 00:00:00
+      </div>
+
+      <!-- CAKE -->
+      <div class="cake-container" id="cakeContainer">
+        <div class="cake locked-cake" id="cake">
+
+          <div class="candle" data-candle="1">
+            <div class="flame"></div>
+          </div>
+
+          <div class="candle" data-candle="2">
+            <div class="flame"></div>
+          </div>
+
+          <div class="candle" data-candle="3">
+            <div class="flame"></div>
+          </div>
+
+          <div class="frosting"></div>
+          <div class="cake-base"></div>
+
+        </div>
+      </div>
+
+      <!-- BIRTHDAY LETTER -->
+      <div id="secretMessage" class="letter-container locked-content">
+
+        <span class="side-heart left-heart">💖</span>
+
+        <div class="party-letter">
+          <h2>🎉 HAPPY BIRTHDAY CUTIEEEE PIEEEEEEEEEEEEEEEEEE🎂</h2>
+          <p id="typedLetterText"></p>
+          <span id="letterSignOff" class="sign-off">— Arya 🚀</span>
+        </div>
+
+        <span class="side-heart right-heart">💖</span>
+
+      </div>
+    </section>
+
+    <!-- SECOND PART: GALLERY AND VIP PASS -->
+    <div id="postBlowContent" class="locked-content">
+
+      <!-- PHOTO GALLERY -->
+      <section class="gallery-section">
+
+        <h2 class="section-title">Photo Vault 📸</h2>
+        <p class="section-subtitle">Click any image to enlarge</p>
+
+        <div class="image-grid">
+
+          <div class="photo-card">
+            <img src="images/pic1.jpg" alt="Photo 1" />
+          </div>
+
+          <div class="photo-card">
+            <img src="images/pic2.jpg" alt="Photo 2" />
+          </div>
+
+          <div class="photo-card">
+            <img src="images/pic3.jpg" alt="Photo 3" />
+          </div>
+
+          <div class="photo-card">
+            <img src="images/pic4.jpg" alt="Photo 4" />
+          </div>
+
+          <div class="photo-card">
+            <img src="images/pic5.jpg" alt="Photo 5" />
+          </div>
+
+          <div class="photo-card">
+            <img src="images/pic6.jpg" alt="Photo 6" />
+          </div>
+
+          <div class="photo-card">
+            <img src="images/pic7.jpg" alt="Photo 7" />
+          </div>
+
+          <div class="photo-card">
+            <img src="images/pic8.jpg" alt="Photo 8" />
+          </div>
+
+        </div>
+      </section>
+
+      <!-- GIFT AND VIP PASS -->
+      <section class="gift-section">
+
+        <div class="gift-box" id="giftBox">
+          <span class="gift-icon">🎁</span>
+          <span class="gift-text">Tap to Unbox Surprise!</span>
+        </div>
+
+        <div id="couponReveal" class="coupon-card">
+          <h3>VIP BIRTHDAY PASS 🎟️</h3>
+
+          <p>
+            Valid for:
+            <strong>Anything u ask forrrrrrrrrrr</strong>
+            on Arya!
+          </p>
+
+          <span class="coupon-code">I LOVE YOU SHERIIIIIIIIIIIII💕</span>
+        </div>
+
+      </section>
+    </div>
+
+  </main>
+
+  <!-- PHOTO LIGHTBOX -->
+  <div class="lightbox" id="lightboxModal">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightboxImg" src="" alt="Enlarged view" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
